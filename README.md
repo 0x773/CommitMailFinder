@@ -26,3 +26,7 @@ Commit Mail Finder is a Python script that allows you to extract email addresses
 python CommitMailFinder.py -repo https://github.com/torvalds/linux -token YOUR_TOKEN
 python CommitMailFinder.py -username torvalds --token YOUR_TOKEN
 python CommitMailFinder.py -username https://github.com/torvalds -token YOUR_TOKEN
+```
+## Or you can use from terminal:
+```bash
+curl -s "https://api.github.com/repos/torvalds/linux/commits" | grep -Eio '([[:alnum:]_.]+@[[:alnum:]]+\.[[:alpha:]]{2,6})'
